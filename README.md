@@ -24,12 +24,15 @@ Hasat requires Python 3.8+ environments.
 
 Clone the repository to your local machine:
 git clone https://github.com/bolatbatuhan/hasat.git
+
 cd hasat
 
 Install all necessary and optional dependencies:
+
 pip install -r requirements.txt
 
 (Optional) Install the web engine binaries to unlock full JavaScript rendering support:
+
 playwright install chromium
 
 ##  CLI Arguments Reference
