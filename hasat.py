@@ -8,9 +8,9 @@ JS-rendered content, meta/alt tags, and file attachments (PDF, DOCX, XLSX).
 Features built-in support for email and username extraction.
 
 # Usage:
-python exploit.py -u https://target.local -d 2 -o wordlist.txt
-python exploit.py -u https://target.local -d 3 --js --files --email -v
-python exploit.py -u https://target.local --proxy http://127.0.0.1:8080 --no-verify-ssl
+python hasat.py -u https://target.local -d 2 -o wordlist.txt
+python hasat.py -u https://target.local -d 3 --js --files --email -v
+python hasat.py -u https://target.local --proxy http://127.0.0.1:8080 --no-verify-ssl
 """
 
 import re
@@ -524,11 +524,11 @@ def parse_args():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  python exploit.py -u https://target.local -d 2 -o wordlist.txt
-  python exploit.py -u https://target.local -d 3 --js --files --email -v
-  python exploit.py -u https://target.local --auth-user pen-tester --auth-pass 'SecurePass123!' --auth-type digest
-  python exploit.py -u https://target.local --proxy http://127.0.0.1:8080 --no-verify-ssl
-  python exploit.py -u https://target.local --header "Cookie: session=abc" --header "X-Forwarded-For: 1.2.3.4"
+  python hasat.py -u https://target.local -d 2 -o wordlist.txt
+  python hasat.py -u https://target.local -d 3 --js --files --email -v
+  python hasat.py -u https://target.local --auth-user pen-tester --auth-pass 'SecurePass123!' --auth-type digest
+  python hasat.py -u https://target.local --proxy http://127.0.0.1:8080 --no-verify-ssl
+  python hasat.py -u https://target.local --header "Cookie: session=abc" --header "X-Forwarded-For: 1.2.3.4"
         """
     )
 

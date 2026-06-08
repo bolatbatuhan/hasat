@@ -57,6 +57,34 @@ hasat [-h] -u URL [-d DEPTH] [-o OUTPUT] [-v] [--delay DELAY] [--min-word MIN_WO
 | `--proxy` | Configures upstream proxies (e.g., Burp Suite via http://127.0.0.1:8080) | — |
 | `--no-verify-ssl` | Drops validation checks for insecure or self-signed internal TLS certificates | `False` |
 
+## 🚀 Usage Examples
+
+Here are some common ways to run Hasat depending on your target scope:
+
+### 1. Basic Crawling & Wordlist Generation
+To perform a standard crawl up to depth 2 and save unique words to a file:
+```bash
+python hasat.py -u https://example.com -d 2 -o wordlist.txt
+```
+
+### 2. Full OSINT & Dynamic JS Scraping (Recommended for Single Page Apps)
+To enable headless browser rendering for React/Angular/Vue sites, extract hidden words from documents, and harvest emails/usernames with real-time logs enabled:
+```bash
+python hasat.py -u https://example.com -d 3 --js --files --email -v
+```
+
+### 3. WAF Evasion via Proxy & Custom Headers
+To route all reconnaissance traffic through an upstream proxy (like Burp Suite) while ignoring invalid TLS certificates and passing a custom session cookie:
+```bash
+python hasat.py -u https://example.com --proxy http://127.0.0.1:8080 --no-verify-ssl --header "Cookie: session=admin_token_xyz"
+```
+
+### 4. Advanced Rate Limiting & Word Length Filtering
+To slow down your requests against aggressive IPS/Rate-limiters and filter out words that are too short or too long:
+```bash
+python hasat.py -u https://example.com --delay 1.5 --min-word 5 --max-word 20
+```
+
 ##  License & Legal Disclaimer
 This utility is strictly developed for authorized penetration testing, defensive research, and educational exercises. Scanning web applications without explicit prior consent or scope agreements is illegal and holds high criminal liability. The developer assumes no responsibility for unauthorized malicious actions.
 
