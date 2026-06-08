@@ -23,8 +23,8 @@ Unlike standard wordlist generators, Hasat goes beyond flat HTML parsing. It ren
 Hasat requires Python 3.8+ environments.
 
 Clone the repository to your local machine:
+```bash
 git clone https://github.com/bolatbatuhan/hasat.git
-
 cd hasat
 
 Install all necessary and optional dependencies:
@@ -34,6 +34,7 @@ pip install -r requirements.txt
 (Optional) Install the web engine binaries to unlock full JavaScript rendering support:
 
 playwright install chromium
+```
 
 ##  CLI Arguments Reference
 hasat [-h] -u URL [-d DEPTH] [-o OUTPUT] [-v] [--delay DELAY] [--min-word MIN_WORD]
@@ -42,18 +43,20 @@ hasat [-h] -u URL [-d DEPTH] [-o OUTPUT] [-v] [--delay DELAY] [--min-word MIN_WO
       [--header HEADER] [--proxy PROXY] [--no-verify-ssl]
 
 ##  Argument Breakdown
-"-u, --url",Target web application root URL (Required),—
-"-d, --depth",Recursive link crawling boundary depth limit,2
-"-o, --output",Filename path for the generated unique wordlist output,wordlist.txt
-"-v, --verbose",Enable real-time logging output for live intelligence monitoring,False
---delay,Interval pause between server requests to control rate limits (Seconds),0.5
---min-word,Minimum character string length constraint for word preservation,4
---max-word,Maximum character string length constraint for filtering long blobs,25
---js,Activates headless browser actions via Playwright for dynamic page execution,False
---files,"Activates document scraping processors for PDF, DOCX, and XLSX files",False
---email,Runs the regex intelligence engines for email harvesting and user derivation,False
---proxy,"Configures upstream proxies (e.g., Burp Suite via http://127.0.0.1:8080)",—
---no-verify-ssl,Drops validation checks for insecure or self-signed internal TLS certificates,False
+| Argument | Description | Default |
+| :--- | :--- | :--- |
+| `-u, --url` | Target web application root URL (Required) | — |
+| `-d, --depth` | Recursive link crawling boundary depth limit | `2` |
+| `-o, --output` | Filename path for the generated unique wordlist output | `wordlist.txt` |
+| `-v, --verbose` | Enable real-time logging output for live intelligence monitoring | `False` |
+| `--delay` | Interval pause between server requests to control rate limits (Seconds) | `0.5` |
+| `--min-word` | Minimum character string length constraint for word preservation | `4` |
+| `--max-word` | Maximum character string length constraint for filtering long blobs | `25` |
+| `--js` | Activates headless browser actions via Playwright for dynamic page execution | `False` |
+| `--files` | Activates document scraping processors for PDF, DOCX, and XLSX files | `False` |
+| `--email` | Runs the regex intelligence engines for email harvesting and user derivation | `False` |
+| `--proxy` | Configures upstream proxies (e.g., Burp Suite via http://127.0.0.1:8080) | — |
+| `--no-verify-ssl` | Drops validation checks for insecure or self-signed internal TLS certificates | `False` |
 
 ##  License & Legal Disclaimer
 This utility is strictly developed for authorized penetration testing, defensive research, and educational exercises. Scanning web applications without explicit prior consent or scope agreements is illegal and holds high criminal liability. The developer assumes no responsibility for unauthorized malicious actions.
