@@ -39,6 +39,7 @@ playwright install chromium
 ##  CLI Arguments Reference
 ```text
 hasat [-h] -u URL [-d DEPTH] [-o OUTPUT] [-v] [--delay DELAY] [--min-word MIN_WORD] [--max-word MAX_WORD] [--js] [--files] [--email] [--auth-user AUTH_USER] [--auth-pass AUTH_PASS] [--auth-type {basic,digest}] [--user-agent USER_AGENT] [--header HEADER] [--proxy PROXY] [--no-verify-ssl]
+```
 
 ##  Argument Breakdown
 | Argument | Description | Default |
