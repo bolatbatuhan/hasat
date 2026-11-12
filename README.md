@@ -57,7 +57,7 @@ hasat [-h] -u URL [-d DEPTH] [-o OUTPUT] [-v] [--delay DELAY] [--min-word MIN_WO
 | `--proxy` | Configures upstream proxies (e.g., Burp Suite via http://127.0.0.1:8080) | — |
 | `--no-verify-ssl` | Drops validation checks for insecure or self-signed internal TLS certificates | `False` |
 
-## 🚀 Usage Examples
+##  Usage Examples
 
 Here are some common ways to run Hasat depending on your target scope:
 
